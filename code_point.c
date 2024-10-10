@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 
 int32_t code_point2(char c1, char c2) {
     return (c1 & 0b00011111) * 64 + (c2 & 0b00111111);
@@ -11,6 +12,8 @@ int32_t code_point3(char c1, char c2, char c3) {
 
 int main() {
     char joseph[] = "Joséph";
+    printf("%ld\n", strlen(joseph)); // returns 7 because accented e is stored as 2-bytes 
+    
     printf("Code point: %d\n", code_point2(joseph[3], joseph[4]));
 
     char pika[] = "ピカチュウ";

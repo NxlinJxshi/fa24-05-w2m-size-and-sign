@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-int8_t is_ascii(char c) {
+int8_t is_ascii(char c) { //synonym of char
     return c <= 128;
 }
 
